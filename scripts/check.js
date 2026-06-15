@@ -1,0 +1,43 @@
+const fs = require("node:fs");
+const path = require("node:path");
+
+const root = process.cwd();
+const required = [
+  "index.html",
+  "server-time.html",
+  "ladder-game.html",
+  "roulette.html",
+  "random-picker.html",
+  "about.html",
+  "privacy.html",
+  "ads.txt",
+  "robots.txt",
+  "sitemap.xml",
+  "assets/styles.css",
+  "assets/app.js"
+];
+
+const missing = required.filter((file) => !fs.existsSync(path.join(root, file)));
+if (missing.length) {
+  console.error(`Missing files: ${missing.join(", ")}`);
+  process.exit(1);
+}
+
+const htmlFiles = required.filter((file) => file.endsWith(".html"));
+for (const file of htmlFiles) {
+  const source = fs.readFileSync(path.join(root, file), "utf8");
+  for (const needle of ["G-3EZW95TCSF", "ca-pub-4587553505034907", "<title>", "description"]) {
+    if (!source.includes(needle)) {
+      console.error(`${file} is missing ${needle}`);
+      process.exit(1);
+    }
+  }
+}
+
+const ads = fs.readFileSync(path.join(root, "ads.txt"), "utf8").trim();
+if (ads !== "google.com, pub-4587553505034907, DIRECT, f08c47fec0942fa0") {
+  console.error("ads.txt content is invalid");
+  process.exit(1);
+}
+
+console.log("Static checks passed");

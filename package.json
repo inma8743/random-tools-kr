@@ -1,0 +1,15 @@
+{
+  "name": "random-tools-kr",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Korean utility hub for server time, ladder game, roulette, and random picker.",
+  "scripts": {
+    "check": "node scripts/check.js"
+  },
+  "keywords": [
+    "server-time",
+    "ladder-game",
+    "roulette",
+    "random-picker"
+  ]
+}
