@@ -314,6 +314,23 @@ textarea {
   margin: 14px 0;
 }
 
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tools a {
+  display: inline-flex;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: white;
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 850;
+}
+
 .chip {
   padding: 7px 10px;
   border-radius: 999px;

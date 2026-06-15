@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>네이버 서버시간 확인 - 초 단위 한국 표준시</title>
+  <meta name="description" content="네이버 서버시간을 찾는 사용자를 위한 초 단위 한국 표준시 확인 도구입니다. 이벤트 오픈, 예약, 티켓팅 전 현재 시간을 빠르게 확인하세요.">
+  <meta name="keywords" content="네이버 서버시간, 서버시간, 네이버 시간, 초시계, 한국 표준시">
+  <link rel="canonical" href="https://random-tools-kr.vercel.app/naver-server-time.html">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EZW95TCSF"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3EZW95TCSF');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4587553505034907" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="site-header"><nav class="nav"><a class="logo" href="/"><span class="logo-mark">R</span><span>랜덤툴즈</span></a><div class="nav-links"><a href="/server-time.html">서버시간</a><a href="/ticketing-server-time.html">티켓팅</a><a href="/class-registration-server-time.html">수강신청</a><a href="/ladder-penalty.html">사다리 벌칙</a></div></nav></header>
+  <main class="container">
+    <div class="tool-layout">
+      <section class="card">
+        <div class="eyebrow">Naver Server Time</div>
+        <h1>네이버 서버시간 확인</h1>
+        <p class="lead">네이버 이벤트, 예약, 오픈 시간 전 초 단위 기준 시간을 확인하세요.</p>
+        <div id="liveClock" class="clock-large">--:--:--</div>
+        <p id="liveDate" class="date-line">시간을 불러오는 중입니다.</p>
+        <div class="field">
+          <label for="targetTime">목표 시간</label>
+          <input id="targetTime" type="time" step="1" value="10:00:00">
+        </div>
+        <div class="button-row">
+          <button class="button secondary quick-time" data-time="09:00:00">09:00</button>
+          <button class="button secondary quick-time" data-time="10:00:00">10:00</button>
+          <button class="button secondary quick-time" data-time="12:00:00">12:00</button>
+          <button class="button secondary quick-time" data-time="18:00:00">18:00</button>
+        </div>
+        <div id="countdown" class="result">--:--:-- 남음</div>
+      </section>
+      <aside class="ad-box"><div class="ad-label">Advertisement</div><p>Google AdSense 승인 후 자동 광고가 표시될 수 있습니다.</p></aside>
+    </div>
+    <article class="article section">
+      <h2>네이버 서버시간을 볼 때 주의할 점</h2>
+      <p>이 페이지는 한국 표준시 기준으로 현재 시간을 보여주는 편의 도구입니다. 네이버 내부 시스템의 실제 서버 시각을 직접 조회하는 기능은 아니며, 이벤트 페이지의 버튼 활성화 시각과는 네트워크 지연이나 서비스 정책에 따라 차이가 있을 수 있습니다.</p>
+      <p>정각 클릭이 중요한 이벤트라면 목표 시간을 미리 설정하고, 10초 전부터 페이지와 실제 이벤트 화면을 함께 확인하는 방식이 좋습니다.</p>
+      <h2>관련 도구</h2>
+      <p class="tools"><a href="/ticketing-server-time.html">티켓팅 서버시간</a> <a href="/server-time.html">서버시간 카운트다운</a> <a href="/roulette.html">룰렛 돌리기</a></p>
+    </article>
+  </main>
+  <footer class="footer"><div class="footer-inner"><span>© 2026 랜덤툴즈</span><span><a href="/privacy.html">개인정보처리방침</a></span></div></footer>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
