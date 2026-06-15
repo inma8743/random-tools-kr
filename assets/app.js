@@ -151,6 +151,24 @@ function initPicker() {
   });
 }
 
+function initOrderPicker() {
+  const button = $("#orderRun");
+  if (!button) return;
+
+  button.addEventListener("click", () => {
+    const items = shuffle(parseLines($("#orderItems").value));
+    const result = $("#orderResult");
+    if (items.length < 2) {
+      result.textContent = "발표자를 2명 이상 입력해 주세요.";
+      return;
+    }
+
+    result.innerHTML = `<ol class="result-list">${items.map((item) => `
+      <li>${escapeHtml(item)}</li>
+    `).join("")}</ol>`;
+  });
+}
+
 function escapeHtml(value) {
   return value
     .replaceAll("&", "&amp;")
@@ -164,3 +182,4 @@ initClock();
 initLadder();
 initRoulette();
 initPicker();
+initOrderPicker();
