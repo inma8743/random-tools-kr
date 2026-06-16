@@ -44,6 +44,24 @@ for (const file of htmlFiles) {
   }
 }
 
+const linkTargets = [
+  ["index.html", "https://type-lab-kr.vercel.app/attachment-test.html"],
+  ["index.html", "https://type-lab-kr.vercel.app/contact-test.html"],
+  ["index.html", "https://type-lab-kr.vercel.app/psychology-tests.html"],
+  ["server-time.html", "https://type-lab-kr.vercel.app/attachment-test.html"],
+  ["roulette.html", "https://type-lab-kr.vercel.app/attachment-test.html"],
+  ["ladder-game.html", "https://type-lab-kr.vercel.app/attachment-test.html"],
+  ["random-picker.html", "https://type-lab-kr.vercel.app/attachment-test.html"]
+];
+
+for (const [file, needle] of linkTargets) {
+  const source = fs.readFileSync(path.join(root, file), "utf8");
+  if (!source.includes(needle)) {
+    console.error(`${file} is missing ${needle}`);
+    process.exit(1);
+  }
+}
+
 const ads = fs.readFileSync(path.join(root, "ads.txt"), "utf8").trim();
 if (ads !== "google.com, pub-4587553505034907, DIRECT, f08c47fec0942fa0") {
   console.error("ads.txt content is invalid");
