@@ -2,6 +2,8 @@
 
 서버시간, 사다리타기, 룰렛, 랜덤뽑기를 제공하는 정적 웹사이트입니다.
 
+GitHub repository: https://github.com/inma8743/random-tools-kr
+
 ## Pages
 
 - `/` 도구 허브
