@@ -54,7 +54,11 @@ const linkTargets = [
   ["server-time.html", "https://type-lab-kr.vercel.app/attachment-test.html"],
   ["roulette.html", "https://type-lab-kr.vercel.app/attachment-test.html"],
   ["ladder-game.html", "https://type-lab-kr.vercel.app/attachment-test.html"],
-  ["random-picker.html", "https://type-lab-kr.vercel.app/attachment-test.html"]
+  ["random-picker.html", "https://type-lab-kr.vercel.app/attachment-test.html"],
+  ["server-time.html", "/coin-flip.html"],
+  ["roulette.html", "/dice-roller.html"],
+  ["ladder-game.html", "/number-randomizer.html"],
+  ["random-picker.html", "/coin-flip.html"]
 ];
 
 for (const [file, needle] of linkTargets) {
