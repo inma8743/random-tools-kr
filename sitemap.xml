@@ -76,6 +76,21 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://random-tools-kr.vercel.app/coin-flip.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://random-tools-kr.vercel.app/dice-roller.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://random-tools-kr.vercel.app/number-randomizer.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://random-tools-kr.vercel.app/about.html</loc>
     <lastmod>2026-06-15</lastmod>
     <priority>0.4</priority>

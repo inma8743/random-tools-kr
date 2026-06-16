@@ -18,6 +18,9 @@ const required = [
   "duty-picker.html",
   "draw-lots.html",
   "team-random-picker.html",
+  "coin-flip.html",
+  "dice-roller.html",
+  "number-randomizer.html",
   "about.html",
   "privacy.html",
   "ads.txt",
@@ -66,6 +69,14 @@ const ads = fs.readFileSync(path.join(root, "ads.txt"), "utf8").trim();
 if (ads !== "google.com, pub-4587553505034907, DIRECT, f08c47fec0942fa0") {
   console.error("ads.txt content is invalid");
   process.exit(1);
+}
+
+const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
+for (const file of ["coin-flip.html", "dice-roller.html", "number-randomizer.html"]) {
+  if (!sitemap.includes(`https://random-tools-kr.vercel.app/${file}`)) {
+    console.error(`sitemap.xml is missing ${file}`);
+    process.exit(1);
+  }
 }
 
 console.log("Static checks passed");

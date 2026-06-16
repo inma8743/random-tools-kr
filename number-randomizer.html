@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>랜덤 숫자 뽑기 - 범위 숫자 생성기</title>
+  <meta name="description" content="최소값과 최대값을 입력해 범위 안의 숫자를 무작위로 뽑는 무료 랜덤 숫자 생성기입니다. 순서, 번호, 이벤트 추첨에 사용할 수 있습니다.">
+  <link rel="canonical" href="https://random-tools-kr.vercel.app/number-randomizer.html">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EZW95TCSF"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3EZW95TCSF');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4587553505034907" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="site-header"><nav class="nav"><a class="logo" href="/"><span class="logo-mark">R</span><span>랜덤툴즈</span></a><div class="nav-links"><a href="/server-time.html">서버시간</a><a href="/coin-flip.html">동전</a><a href="/dice-roller.html">주사위</a><a href="/random-picker.html">랜덤뽑기</a></div></nav></header>
+  <main class="container">
+    <div class="tool-layout">
+      <section class="card">
+        <div class="eyebrow">Number Randomizer</div>
+        <h1>랜덤 숫자 뽑기</h1>
+        <p class="lead">범위를 입력하면 그 안에서 숫자 하나를 무작위로 뽑습니다.</p>
+        <div class="field">
+          <label for="minNumber">최소값</label>
+          <input id="minNumber" type="number" value="1">
+        </div>
+        <div class="field">
+          <label for="maxNumber">최대값</label>
+          <input id="maxNumber" type="number" value="100">
+        </div>
+        <button id="numberRun" class="button">숫자 뽑기</button>
+        <div id="numberResult" class="result">결과가 여기에 표시됩니다.</div>
+      </section>
+      <aside class="ad-box"><div class="ad-label">Advertisement</div><p>Google AdSense 승인 후 자동 광고가 표시될 수 있습니다.</p></aside>
+    </div>
+    <article class="article section">
+      <h2>랜덤 숫자 생성기 사용 예시</h2>
+      <p>번호 추첨, 발표 순서, 이벤트 당첨 번호, 간단한 게임 진행처럼 숫자 하나가 필요할 때 사용하세요.</p>
+      <p class="tools"><a href="/coin-flip.html">동전 던지기</a> <a href="/dice-roller.html">주사위 굴리기</a> <a href="/random-picker.html">랜덤뽑기</a> <a href="/presentation-order-picker.html">발표 순서 뽑기</a></p>
+    </article>
+  </main>
+  <footer class="footer"><div class="footer-inner"><span>© 2026 랜덤툴즈</span><span><a href="/privacy.html">개인정보처리방침</a></span></div></footer>
+  <script>
+    const numberResult = document.getElementById('numberResult');
+    document.getElementById('numberRun').addEventListener('click', () => {
+      let min = Math.trunc(Number(document.getElementById('minNumber').value) || 0);
+      let max = Math.trunc(Number(document.getElementById('maxNumber').value) || 0);
+      if (min > max) [min, max] = [max, min];
+      const value = Math.floor(Math.random() * (max - min + 1)) + min;
+      numberResult.textContent = `${min}부터 ${max} 사이의 숫자: ${value}`;
+    });
+  </script>
+</body>
+</html>
