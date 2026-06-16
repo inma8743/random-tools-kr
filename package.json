@@ -1,18 +1,19 @@
-{
-  "name": "random-tools-kr",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Korean utility hub for server time, ladder game, roulette, and random picker.",
-  "scripts": {
-    "dev": "npx serve .",
-    "preview": "npx serve .",
-    "check": "node scripts/check.js",
-    "check:sitemap": "powershell -ExecutionPolicy Bypass -File scripts/check-sitemap.ps1"
-  },
-  "keywords": [
-    "server-time",
-    "ladder-game",
-    "roulette",
-    "random-picker"
-  ]
+﻿{
+    "name":  "random-tools-kr",
+    "version":  "1.0.0",
+    "private":  true,
+    "description":  "Korean utility hub for server time, ladder game, roulette, and random picker.",
+    "scripts":  {
+                    "dev":  "npx serve .",
+                    "preview":  "npx serve .",
+                    "check":  "node scripts/check.js",
+                    "check:sitemap":  "powershell -ExecutionPolicy Bypass -File scripts/check-sitemap.ps1",
+                    "analyze:gsc":  "powershell -ExecutionPolicy Bypass -File scripts/analyze-search-console.ps1"
+                },
+    "keywords":  [
+                     "server-time",
+                     "ladder-game",
+                     "roulette",
+                     "random-picker"
+                 ]
 }
