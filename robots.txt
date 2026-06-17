@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://random-tools-kr.vercel.app/sitemap.xml
+Sitemap: https://random-tools-kr.vercel.app/sitemap-index.xml
