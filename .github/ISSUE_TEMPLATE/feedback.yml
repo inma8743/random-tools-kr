@@ -1,0 +1,36 @@
+name: 랜덤툴즈 피드백
+description: 오류 제보, 페이지 개선 제안, 추가 기능 요청을 남겨주세요.
+title: "[피드백] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        랜덤툴즈을 더 쓸모 있게 만들기 위한 피드백을 남겨주세요.
+        계정 정보, 전화번호, 비밀번호 등 민감한 개인정보는 적지 말아 주세요.
+  - type: input
+    id: page
+    attributes:
+      label: 관련 페이지
+      description: 의견이 있는 페이지 주소나 페이지 이름을 적어주세요.
+      placeholder: 예) https://random-tools-kr.vercel.app/
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 피드백 종류
+      options:
+        - 오류 제보
+        - 기능 제안
+        - 콘텐츠 개선
+        - 사용성/디자인
+        - 기타
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 내용
+      description: 무엇을 고치거나 추가하면 좋을지 적어주세요.
+      placeholder: 예) 모바일에서 버튼이 너무 아래에 있어 불편합니다.
+    validations:
+      required: true

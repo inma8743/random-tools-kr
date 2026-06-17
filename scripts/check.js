@@ -23,6 +23,7 @@ const required = [
   "number-randomizer.html",
   "about.html",
   "privacy.html",
+  "feedback.html",
   "ads.txt",
   "robots.txt",
   "sitemap.xml",
@@ -76,7 +77,7 @@ if (ads !== "google.com, pub-4587553505034907, DIRECT, f08c47fec0942fa0") {
 }
 
 const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
-for (const file of ["coin-flip.html", "dice-roller.html", "number-randomizer.html"]) {
+for (const file of ["coin-flip.html", "dice-roller.html", "number-randomizer.html", "feedback.html"]) {
   if (!sitemap.includes(`https://random-tools-kr.vercel.app/${file}`)) {
     console.error(`sitemap.xml is missing ${file}`);
     process.exit(1);
