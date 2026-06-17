@@ -91,6 +91,16 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://random-tools-kr.vercel.app/random-number-generator.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://random-tools-kr.vercel.app/giveaway-winner-picker.html</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.86</priority>
+  </url>
+  <url>
     <loc>https://random-tools-kr.vercel.app/about.html</loc>
     <lastmod>2026-06-15</lastmod>
     <priority>0.4</priority>
